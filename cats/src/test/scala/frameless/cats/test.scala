@@ -35,6 +35,8 @@ trait SparkTests {
   implicit class seqToRdd[A: ClassTag](seq: Seq[A])(implicit sc: SC) {
     def toRdd: RDD[A] = sc.makeRDD(seq)
   }
+
+  val testStr: String = "Hello World"
 }
 
 object Tests {
